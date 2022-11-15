@@ -6,13 +6,8 @@ option go_package="kitoptions/;kitoptions";
 import "google/protobuf/descriptor.proto";
 
 
-message MiddlewareOptions {
-    string name = 1;            /// middleware 名称
-    bool enable = 2;            /// 使能
-}
-
 extend google.protobuf.MethodOptions { 
-    bool enableAuth = 50000;  
-    repeated MiddlewareOptions middlewares = 50001;
+    optional bool enableAuth = 50000;  
+    repeated string middlewares = 50001;
 }
 
