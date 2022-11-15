@@ -1,7 +1,7 @@
 syntax = "proto3";
 package kitoptions;
 
-option go_package=".;kitoptions";
+option go_package="kitoptions/;kitoptions";
 /* option go_package="github.com/leewckk/gokit-micro-options;options"; */
 import "google/protobuf/descriptor.proto";
 
