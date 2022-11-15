@@ -1,7 +1,8 @@
 syntax = "proto3";
-package options;
+package kitoptions;
 
-option go_package="github.com/leewckk/gokit-micro-options;options";
+option go_package=".;kitoptions";
+/* option go_package="github.com/leewckk/gokit-micro-options;options"; */
 import "google/protobuf/descriptor.proto";
 
 extend google.protobuf.MethodOptions { bool enableAuth = 50000;  }
