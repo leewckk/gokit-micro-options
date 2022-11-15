@@ -5,5 +5,14 @@ option go_package="kitoptions/;kitoptions";
 /* option go_package="github.com/leewckk/gokit-micro-options;options"; */
 import "google/protobuf/descriptor.proto";
 
-extend google.protobuf.MethodOptions { bool enableAuth = 50000;  }
+
+message MiddlewareOptions {
+    string name = 1;            /// middleware 名称
+    bool enable = 2;            /// 使能
+}
+
+extend google.protobuf.MethodOptions { 
+    bool enableAuth = 50000;  
+    repeated MiddlewareOptions middlewares = 50001;
+}
 
